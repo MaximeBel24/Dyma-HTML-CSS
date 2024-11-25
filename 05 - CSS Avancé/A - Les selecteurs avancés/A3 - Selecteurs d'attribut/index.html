@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Appliquer des styles CSS</title>
+    <style>
+      /* Vaut exactement */
+      p[name="1"] {
+        color: red;
+      }
+
+      /* Contenant avec * */
+      input[name*="name"] {
+        border: 1px blue solid;
+      }
+
+      /* Contenant le mot avec ~ */
+      input[name~="super"] {
+        border: 1px green solid;
+      }
+
+      /*  Commençant par avec ^ */
+      a[href^="https:"] {
+        color: green;
+      }
+      a[href^="http:"] {
+        color: red;
+      }
+
+      /* Finissant par avec $ */
+      [class$="-rouge"] {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <p name="1">p-1</p>
+
+    <div>
+      <input type="text" name="email" />
+      <input type="text" name="email-validation" />
+    </div>
+
+    <br />
+
+    <div>
+      <input type="text" name="name" />
+      <input type="text" name="surname" />
+    </div>
+
+    <br />
+
+    <div>
+      <input type="text" name="my super input1" />
+      <input type="text" name="my super input2" />
+    </div>
+
+    <br />
+
+    <a href="https://google.fr">Un lien sûr</a>
+    <a href="http://google.fr">Un lien pas sûr</a>
+
+    <br />
+
+    <p class="ma-classe1-rouge">Rouge</p>
+    <p class="une-classe2-rouge">Rouge</p>
+    <p class="classe3-rouge">Rouge</p>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Appliquer des styles CSS</title>
+    <style>
+      /* Groupement pour appliquer la même règle
+        à plusieurs sélecteurs  */
+      div span,
+      div div {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <span>1</span>
+      <span>2</span>
+      <span>3</span>
+      <span>4</span>
+    </div>
+    <div>
+      <div>div-1</div>
+      <div>div-2</div>
+    </div>
+  </body>
+</html>
