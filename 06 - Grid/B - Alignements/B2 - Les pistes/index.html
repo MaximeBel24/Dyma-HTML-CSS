@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Les grilles</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      h2,
+      h3 {
+        margin: 5px;
+      }
+
+      .container-flex {
+        display: inline-flex;
+        flex-flow: column;
+        margin-bottom: 5px;
+      }
+
+      .wrapper {
+        box-sizing: border-box;
+        display: inline-grid;
+        margin-left: 5px;
+        padding: 5px;
+        border: red solid 2px;
+        width: 200px;
+        height: 200px;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(3, auto);
+      }
+
+      .elem {
+        background: #4a69bd;
+        border: 1px solid black;
+        min-height: 50px;
+        min-width: 50px;
+      }
+
+      .a-center {
+        align-content: center;
+      }
+      .a-start {
+        align-content: start;
+      }
+      .a-end {
+        align-content: end;
+      }
+      .a-stretch {
+        align-content: stretch;
+      }
+      .a-space-around {
+        align-content: space-around;
+      }
+      .a-space-between {
+        align-content: space-between;
+      }
+      .a-space-evenly {
+        align-content: space-evenly;
+      }
+
+      .j-center {
+        justify-content: center;
+      }
+      .j-start {
+        justify-content: start;
+      }
+      .j-end {
+        justify-content: end;
+      }
+      .j-stretch {
+        justify-content: stretch;
+      }
+      .j-space-around {
+        justify-content: space-around;
+      }
+      .j-space-between {
+        justify-content: space-between;
+      }
+      .j-space-evenly {
+        justify-content: space-evenly;
+      }
+
+      .aj-center {
+        place-content: center;
+      }
+      .aj-start {
+        place-content: start;
+      }
+      .aj-end {
+        place-content: end;
+      }
+      .aj-start-end {
+        place-content: start end;
+      }
+      .aj-space-around {
+        place-content: space-around;
+      }
+      .aj-space-between {
+        place-content: space-between;
+      }
+      .aj-space-evenly {
+        place-content: space-evenly;
+      }
+      .aj-start-end {
+        place-content: start end;
+      }
+      .aj-end-space-evenly {
+        place-content: end space-evenly;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Align-content</h2>
+    <div class="container-flex">
+      <h3>Center</h3>
+      <div class="wrapper a-center">
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+      </div>
+    </div>
+    <div class="container-flex">
+      <h3>Start</h3>
+      <div class="wrapper a-start">
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+      </div>
+    </div>
+    <div class="container-flex">
+      <h3>End</h3>
+      <div class="wrapper a-end">
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+      </div>
+    </div>
+    <div class="container-flex">
+      <h3>Stretch</h3>
+      <div class="wrapper a-stretch">
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+      </div>
+    </div>
+    <div class="container-flex">
+      <h3>Space-around</h3>
+      <div class="wrapper a-space-around">
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+      </div>
+    </div>
+    <div class="container-flex">
+      <h3>Space-between</h3>
+      <div class="wrapper a-space-between">
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+      </div>
+    </div>
+    <div class="container-flex">
+      <h3>Space-evenly</h3>
+      <div class="wrapper a-space-evenly">
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+      </div>
+    </div>
+
+    <br /><br /><br />
+
+    <h2>Justify-content</h2>
+    <div class="container-flex">
+      <h3>Center</h3>
+      <div class="wrapper j-center">
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+      </div>
+    </div>
+    <div class="container-flex">
+      <h3>Start</h3>
+      <div class="wrapper j-start">
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+      </div>
+    </div>
+    <div class="container-flex">
+      <h3>End</h3>
+      <div class="wrapper j-end">
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+      </div>
+    </div>
+    <div class="container-flex">
+      <h3>Stretch</h3>
+      <div class="wrapper j-stretch">
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+      </div>
+    </div>
+    <div class="container-flex">
+      <h3>Space-around</h3>
+      <div class="wrapper j-space-around">
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+      </div>
+    </div>
+    <div class="container-flex">
+      <h3>Space-between</h3>
+      <div class="wrapper j-space-between">
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+      </div>
+    </div>
+    <div class="container-flex">
+      <h3>Space-evenly</h3>
+      <div class="wrapper j-space-evenly">
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+      </div>
+    </div>
+
+    <br /><br /><br />
+
+    <h2>Place-content</h2>
+    <div class="container-flex">
+      <h3>Center</h3>
+      <div class="wrapper aj-center">
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+      </div>
+    </div>
+    <div class="container-flex">
+      <h3>Start</h3>
+      <div class="wrapper aj-start">
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+      </div>
+    </div>
+    <div class="container-flex">
+      <h3>End</h3>
+      <div class="wrapper aj-end">
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+      </div>
+    </div>
+    <div class="container-flex">
+      <h3>Stretch</h3>
+      <div class="wrapper aj-stretch">
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+      </div>
+    </div>
+    <div class="container-flex">
+      <h3>Space-around</h3>
+      <div class="wrapper aj-space-around">
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+      </div>
+    </div>
+    <div class="container-flex">
+      <h3>Space-between</h3>
+      <div class="wrapper aj-space-between">
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+      </div>
+    </div>
+    <div class="container-flex">
+      <h3>Space-evenly</h3>
+      <div class="wrapper aj-space-evenly">
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+      </div>
+    </div>
+    <div class="container-flex">
+      <h3>Start / End</h3>
+      <div class="wrapper aj-start-end">
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+      </div>
+    </div>
+
+    <div class="container-flex">
+      <h3>End / Space-evenly</h3>
+      <div class="wrapper aj-end-space-evenly">
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+        <div class="elem"></div>
+      </div>
+    </div>
+  </body>
+</html>
