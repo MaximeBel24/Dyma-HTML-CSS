@@ -38,12 +38,22 @@ body {
 }
 
 .card {
+  box-sizing: border-box;
   width: 500px;
-  height: 300px;
   border: 1px solid #ccc;
   background: white;
   border-radius: 30px;
   padding: 2rem;
+}
+@media only screen and (max-width: 500px) {
+  .card {
+    background: red;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .card {
+    background: orange;
+  }
 }
 .card h1 {
   font-size: 1.5rem;
@@ -53,8 +63,21 @@ body {
 .card h1 span {
   color: green;
 }
+@media only screen and (max-width: 500px) {
+  .card h1 span {
+    color: red;
+  }
+}
 .card .text {
   color: #333;
+}
+.card ul {
+  padding-left: 0;
+  list-style: none;
+}
+.card ul li {
+  display: inline-block;
+  padding: 1rem 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */
