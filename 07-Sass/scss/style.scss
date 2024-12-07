@@ -1,31 +1,37 @@
 // Les variables sont importées depuis notre partial :
-@use  "buttons" as *;
-@use  "variables" as *;
-@use  "mixins" as *;
-@use  "media" as *;
+@use "variables" as *;
+@use "buttons" as *;
+@use "mixins" as *;
+@use "media" as *;
+@use "functions" as *;
 
 body {
+  margin: 0;
   font-family: $font-family;
   background: $gray;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
 }
 
 .card {
   box-sizing: border-box;
+  position: absolute;
+  left: centerAbsolute(500px);
+  top: centerAbsolute(300px);
+  width: 500px;
+  height: 400px;
+  border: 1px solid #ccc;
+  background: white;
+  border-radius: 30px;
+  padding: 2rem;
+
   @include responsive(xs) {
     background: red;
   }
   @include responsive(xl) {
     background: orange;
   }
-  width: 500px;
-  border: 1px solid #ccc;
-  background: white;
-  border-radius: 30px;
-  padding: 2rem;
+
   h1 {
     font-size: 1.5rem;
     padding-bottom: 1rem;
